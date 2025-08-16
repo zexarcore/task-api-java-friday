@@ -1,4 +1,4 @@
-package tasks.models;
+package Estudiante.models;
 
 public class Task {
     private String name;
