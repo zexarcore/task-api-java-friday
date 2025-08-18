@@ -12,7 +12,7 @@ public class Task {
     }
 
     // Setters
-    public void setName(String user){
+    public void setUser(String user){
         this.user = user;
     }
 
