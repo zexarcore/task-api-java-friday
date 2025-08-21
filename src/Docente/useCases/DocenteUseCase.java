@@ -19,9 +19,9 @@ public class DocenteUseCase {
     // CREATE
     public String create(String name, String description) {
         try {
-            Docente docente = new Docente(user, id, false);
+            Docente docente = new Docente(user, id, acces, false);
             this.docentes.add(docente); // Uso de la lista
-            return "Tarea Creada:" + Docente.getuser() + " Documento:" + Docente.getid();
+            return "Docente creado:" + Docente.getuser() + " Documento:" + docente.getid();
         }
         catch (Exception e) {
             return "Ha ocurrido un error, por favor intentelo nuevo";

@@ -19,9 +19,9 @@ public class EstudianteUseCase {
     // CREATE
     public String create(String name, String description) {
         try {
-            Estudiante estudiante = new Estudiante (user, id, false);
+            Estudiante estudiante = new Estudiante (user, id, acces, false);
             this.estudiantes.add(estudiante); // Uso de la lista
-            return "Estudiante creado:" + Estudiante.getUser() + " Documento:" + Estudiante.getid();
+            return "Estudiante creado:" + Estudiante.getuser() + " Documento:" + Estudiante.getid();
         }
         catch (Exception e) {
             return "Ha ocurrido un error, por favor intentelo nuevo";
