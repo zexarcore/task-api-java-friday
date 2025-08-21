@@ -1,18 +1,18 @@
-package Estudiante.models;
+package Docente.models;
 
-public class Task {
+public class Docente {
     private String user;
     private int id;
 
-    public Task(){}
+    public Docente(){}
     
-    public Task(String user, int id){
+    public Docente(String user, int id){
         this.user = user;
         this.id = id;
     }
 
     // Setters
-    public void setUser(String user){
+    public void setName(String user){
         this.user = user;
     }
 
@@ -28,3 +28,4 @@ public class Task {
         return this.id;
     }
 }
+
