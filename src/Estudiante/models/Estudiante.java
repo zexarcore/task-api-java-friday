@@ -3,11 +3,11 @@ package Estudiante.models;
 public class Estudiante {
     private String user;
     private int id;
-    private String acces;
+    private Boolean acces;
 
     public Estudiante(){}
     
-    public Estudiante(String user, int id, String acces){
+    public Estudiante(String user, int id, Boolean acces){
         this.user = user;
         this.id = id;
         this.acces = acces;
@@ -22,7 +22,7 @@ public class Estudiante {
         this.id = id;
     }
 
-    public void setAcces(String acces){
+    public void setAcces(Boolean acces){
         this.acces = acces;
     }
 
@@ -36,7 +36,7 @@ public class Estudiante {
         return this.id;
     }
 
-      public String getAcces(){
+      public Boolean getAcces(){
         return this.acces;
     }
 }
