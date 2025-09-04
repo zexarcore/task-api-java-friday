@@ -19,6 +19,18 @@ public class EstudianteUseCase {
     // CREATE
     public String create(String name, String description) {
         try {
+            Estudiante estudiante = new Estudiante (tipoCliente, email, recuperarPassword, registrarse false);
+            this.estudiantes.add(estudiante); // Uso de la lista
+            return "Estudiante creado:" + Estudiante.getuser() + " Documento:" + Estudiante.getid();
+        }
+        catch (Exception e) {
+            return "Ha ocurrido un error, por favor intentelo nuevo";
+        }
+    }
+
+ // UPDATE
+    public String update(int index, String name, String description) {
+        try {
             Estudiante estudiante = new Estudiante (user, id, acces, false);
             this.estudiantes.add(estudiante); // Uso de la lista
             return "Estudiante creado:" + Estudiante.getuser() + " Documento:" + Estudiante.getid();
@@ -27,5 +39,6 @@ public class EstudianteUseCase {
             return "Ha ocurrido un error, por favor intentelo nuevo";
         }
     }
+
 }
 

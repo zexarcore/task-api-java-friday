@@ -1,42 +1,64 @@
 package Estudiante.models;
 
 public class Estudiante {
-    private String user;
-    private int id;
-    private Boolean acces;
+    private String tipoCliente;
+    private int email;
+    private Boolean password;
+    private String recuperarPassword;
+    private String registrarse;
+
 
     public Estudiante(){}
     
-    public Estudiante(String user, int id, Boolean acces){
-        this.user = user;
-        this.id = id;
-        this.acces = acces;
+    public Estudiante(String tipoCliente, int email, Boolean password, String recuperarPassword,String registrarse){
+        this.tipoCliente = tipoCliente;
+        this.email = email;
+        this.password = password;
+        this.recuperarPassword = recuperarPassword;
+        this. registrarse = registrarse;
+
     }
 
     // Setters
-    public void setUser(String user){
-        this.user = user;
+    public void settipoCliente(String tipocliente){
+        this.tipoCliente = tipocliente;
     }
 
-    public void setId(int id){
-        this.id = id;
+    public void setemail(int email){
+        this.email = email;
     }
 
-    public void setAcces(Boolean acces){
-        this.acces = acces;
+    public void setpassword(Boolean password){
+        this.password = password;
     }
+    public void setrecuperarPassword(String recuperarPasword){
+        this.recuperarPassword = recuperarPasword;
+    }
+     public void setregistrarse(String registrarse){
+        this.registrarse = registrarse;
+    }
+
 
     // Getters
 
-    public String getUser(){
-        return this.user;
+    public String gettipoCliente(){
+        return this.tipoCliente;
     }
 
-    public int getId(){
-        return this.id;
+    public int getemail(){
+        return this.email;
     }
 
-      public Boolean getAcces(){
-        return this.acces;
+    public Boolean getpassword(){
+        return this.password;
     }
+
+     public String getrecuperarPassword(){
+        return this.recuperarPassword;
+    }
+
+    public String getgistrarse(){
+        return this.registrarse;
+    }
+
 }
