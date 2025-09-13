@@ -35,7 +35,7 @@ public class Task {
         return this.description;
     }
 
-    public boolean getSatus(){
+    public boolean getStatus(){
         return this.status;
     }
 }

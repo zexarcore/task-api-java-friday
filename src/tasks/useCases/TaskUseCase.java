@@ -57,9 +57,8 @@ public class TaskUseCase { // Clase de las acciones a realizar el Use Case
     }
 
     // Create
-    public String create(String name, String description) {
+    public String create(Task task) {
         try {
-            Task task = new Task(name, description, false);
             this.tasks.add(task); // Uso de la lista
             return "Tarea Creada:" + task.getName() + " Descripcion:" + task.getDescription();
         }
@@ -69,15 +68,15 @@ public class TaskUseCase { // Clase de las acciones a realizar el Use Case
     }
 
     // Update
-    public String update(int index, String name, String description, boolean status) {
+    public String update(int index, Task taskIn) { //tarea entrante
         try {
             Task taskFound = new Task();
             for (int i = 0; i < tasks.size(); i++) {
                if(index == i){
-                Task task = tasks.get(index);
-                task.setName(name);
-                task.setDescription(description);
-                task.setStatus(status);
+                Task task = tasks.get(index); // tarea existente
+                task.setName(taskIn.getName());
+                task.setDescription(taskIn.getDescription());
+                task.setStatus(taskIn.getStatus());
                 taskFound = task;
                }
             }
